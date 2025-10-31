@@ -7,6 +7,7 @@ $installDir = "$env:USERPROFILE\KForge"
 $zipPath = "$env:TEMP\kforge.zip"
 
 Write-Host "Downloading KotlinForge v$version..."
+Write-Host "DEBUG: Downloading from $zipUrl"
 Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
 
 Write-Host "Extracting..."
