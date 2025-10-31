@@ -2,7 +2,7 @@
 $ErrorActionPreference = "Stop"
 
 $version = "0.1.0"
-$zipUrl = "https://github.com/yourname/kotlinforge/releases/download/v$version/kotlinforge-$version-x64.zip"
+$zipUrl = "https://github.com/bhus/editor_push/releases/download/v$version/kotlinforge-$version-x64.zip"
 $installDir = "$env:USERPROFILE\KForge"
 $zipPath = "$env:TEMP\kforge.zip"
 
