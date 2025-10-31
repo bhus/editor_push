@@ -13,9 +13,12 @@ Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
 Write-Host "Extracting..."
 Expand-Archive -Path $zipPath -DestinationPath $installDir -Force
 
+# --- ✅ Correct bin path inside the ZIP ---
+$binPath = Join-Path $installDir "kotlinforge-mvp\bin"
+
 Write-Host "Adding to PATH..."
 $oldPath = [Environment]::GetEnvironmentVariable("Path", "User")
-$newPath = "$oldPath;$installDir"
+$newPath = "$oldPath;$binPath"
 [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
 
 Write-Host "Cleaning up..."
